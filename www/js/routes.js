@@ -10,16 +10,24 @@ angular.module('app.routes', [])
     
   
 
-      .state('u', {
+      .state('menu.u', {
     url: '/index',
-    templateUrl: 'templates/u.html',
-    controller: 'uCtrl'
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/u.html',
+        controller: 'uCtrl'
+      }
+    }
   })
 
-  .state('page2', {
-    url: '/his',
-    templateUrl: 'templates/page2.html',
-    controller: 'page2Ctrl'
+  .state('menu.page8', {
+    url: '/page8',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/page8.html',
+        controller: 'page8Ctrl'
+      }
+    }
   })
 
   .state('menu.page3', {
@@ -60,7 +68,7 @@ angular.module('app.routes', [])
     controller: 'signupCtrl'
   })
 
-$urlRouterProvider.otherwise('/index')
+$urlRouterProvider.otherwise('/login')
 
   
 
